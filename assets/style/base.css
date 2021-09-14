@@ -13,6 +13,16 @@
   transition: .2s linear;
 }
 
+*::-moz-selection {
+  background-color: #16cf16;
+  color: #fff;
+}
+
+*::selection {
+  background-color: #16cf16;
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -45,6 +55,7 @@ html::-webkit-scrollbar-thumb {
   padding: 1rem;
   max-width: 30vw;
   border-radius: 20rem;
+  font-weight: 500;
   background: #16cf16;
   display: inline-block;
   color: #070c1f;

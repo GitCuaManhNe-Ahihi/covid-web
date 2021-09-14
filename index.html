@@ -7,7 +7,9 @@
     <title>Covid19</title>
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -45,6 +47,145 @@
                     <img src="https://boring-galileo-5a5238.netlify.app/Covidy_files/hero.png" alt="">
                 </div>
         </div>
+            <div class="statistis__form grid-1">
+                <div class="statistis__line">
+                </div>
+                <div class="statistis__form__element" onload="incNbr()">
+                    <div class="text">
+                        <p id="nbr0">186</p>
+                        <span>affected country</span>
+                    </div>       
+                </div>
+                <div class="statistis__form__element" onload="incNbr1()">
+                    <div class="text">
+                    <p id="nbr1">2411875</p>
+                    <span>Comfirmed cases</span>
+                </div>
+                </div>
+                <div class="statistis__form__element" onload="incNbr2()">
+                    <div class="text">
+                    <p id="nbr2">155897</p>
+                    <span>Recovered Cases</span>
+                </div>
+                </div>
+                <div class="statistis__form__element" onload="incNbr3()">
+                    <div class="text">
+                    <p id="nbr3">10564</p>
+                    <span>Worldwide Deaths</span>
+                    </div>
+                </div>
+            </div>
     </section>
+    <section id="about">
+        <div class="about__ grid-1">
+            <div class="about__banner">
+                <img src="https://boring-galileo-5a5238.netlify.app/Covidy_files/about.png" alt="">
+            </div>
+            <div class="about__information">
+                <p>About Covid</p>
+                <h1> What is Coronavirus?
+                </h1>
+                <ul>
+                    <li>COVID-19 is the disease caused by SARS-CoV-2, the coronavirus that emerged in December 2019.</li>
+                    <li >COVID-19 can be severe, and has caused millions of deaths around the world as well as lasting health problems in some who have survived the illness.</li>
+                    <li > The coronavirus can be spread from person to person. It is diagnosed with a laboratory test.</li>
+                    <li >COVID-19 vaccines have been authorized for emergency use by the U.S. Food and Drug Administration, and vaccination programs are in progress across the U.S. and in many parts of the world.</li>
+                    <li> Prevention involves physical distancing, mask-wearing, hand hygiene and staying away from others if you feel sick.</li>
+                </ul>
+                <a href="#" class="home__button-abour-corona style-button">
+                   See Symptoms
+                </a>
+            </div>
+    </div>
+    </section>
+    <section id="Symptoms">
+        <div class="Symptoms__ grid-1">
+            <div class="Symptoms__detail">
+                <span class="heading">
+                    Covid symptoms
+                </span>
+                <h1>
+                    What are symptoms?
+                </h1>
+                <p>   
+                    Some people infected with the coronavirus have mild COVID-19 illness, and others have no symptoms at all. In some cases, however, COVID-19 can lead to respiratory failure, lasting lung and heart muscle damage, nervous system problems, kidney failure or death.
+                </p>
+                <ul>
+                    
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Cough</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Fever or chills</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Sore throat</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Diarrhea</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Headache</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>New fatigue</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Congestion or runny nose</li>
+                </ul>
+                <a href="#" class="home__button-abour-corona style-button">
+                    WHY COVID SPREAD
+                 </a>
+            </div>
+            <div class="Symptoms__banner">
+                <img src="https://boring-galileo-5a5238.netlify.app/Covidy_files/symptoms.png" alt="Symptoms">
+            </div>
+        </div>
+    </section>
+    <section id="covid-threat">
+        <div class="covid-threat__ grid-1">
+            <span class="heading-covid-threat">
+                Covid Threat
+            </span>
+            <h1>
+                Maximum amount of people die with Covid-19
+            </h1>
+            <p>
+                The actual death toll from COVID-19 is likely to be higher than the number of confirmed deaths – this is due to limited testing and problems in the attribution of the cause of death
+            </p>
+            <div class="covid-threat__banner">
+            <img src="https://boring-galileo-5a5238.netlify.app/Covidy_files/world-map.png" alt="">
+              </div>
+        </div>
+    </section>
+    <section id="Covid-Spread">
+        <div class="Covid-Spread__ grid-1">
+            <div class="Covid-Spread__image">
+                <div class="Covid-Spread__image-element">
+                    <img src="https://boring-galileo-5a5238.netlify.app/Covidy_files/personal-contact.png" alt="">
+                    <p>Personal Contact</p>
+                </div>
+                <div class="Covid-Spread__image-element">
+                    <img src="https://boring-galileo-5a5238.netlify.app/Covidy_files/face-touch.png" alt="">
+                    <p>Personal Contact</p>
+                </div>
+                <div class="Covid-Spread__image-element">
+                    <img src="https://boring-galileo-5a5238.netlify.app/Covidy_files/people-crowd.png" alt="">
+                    <p>Personal Contact</p>
+                </div>
+                <div class="Covid-Spread__image-element">
+                    <img src="https://boring-galileo-5a5238.netlify.app/Covidy_files/dry-cough.png" alt="">
+                    <p>Personal Contact</p>
+                </div>
+            </div>
+            <div class="Covid-Spread__info">
+                <span class="heading-spread">
+                    Covid Spread
+                </span>
+                <h1>
+                    How does coronavirus spread?
+                </h1>
+                <p>Current evidence suggests that the virus spreads mainly between people who are in close contact with each other, typically within 1 metre (short-range). A person can be infected when aerosols or droplets containing the virus are inhaled or come directly into contact with the eyes, nose, or mouth.</p>
+                <ul>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Droplets or aerosols</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Airborne transmission.</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Surface transmission</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Fecal-oral</li>
+                </ul>
+                <a href="#" class="home__button-abour-corona style-button">
+                   COVID PRIVENTION
+                 </a>
+            </div>
+
+        </div>
+    </section>
+    <script src="assets/javascript/IncreaesNumber.js"></script>
 </body>
 </html>

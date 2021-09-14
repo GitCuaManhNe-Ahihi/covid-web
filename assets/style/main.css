@@ -13,6 +13,16 @@
   transition: .2s linear;
 }
 
+*::-moz-selection {
+  background-color: #16cf16;
+  color: #fff;
+}
+
+*::selection {
+  background-color: #16cf16;
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -45,6 +55,7 @@ html::-webkit-scrollbar-thumb {
   padding: 1rem;
   max-width: 30vw;
   border-radius: 20rem;
+  font-weight: 500;
   background: #16cf16;
   display: inline-block;
   color: #070c1f;
@@ -71,6 +82,16 @@ html::-webkit-scrollbar-thumb {
   100% {
     margin-top: 0rem;
   }
+}
+
+*::-moz-selection {
+  background-color: #16cf16;
+  color: #fff;
+}
+
+*::selection {
+  background-color: #16cf16;
+  color: #fff;
 }
 
 body {
@@ -145,13 +166,15 @@ header .header__Number-phone-button {
 
 #home {
   position: relative;
-  top: 8rem;
+  margin-top: 8.1rem;
   left: 0;
   right: 0;
   padding: 5rem;
+  height: calc(100vh - 8.1rem);
 }
 
 #home .home__ {
+  position: relative;
   margin: auto;
   display: -ms-grid;
   display: grid;
@@ -185,7 +208,374 @@ header .header__Number-phone-button {
 }
 
 #home .home__banner img {
-  -webkit-animation: Infi-up-down linear 1.35s infinite;
-          animation: Infi-up-down linear 1.35s infinite;
+  -webkit-animation: shakeY linear 10s infinite;
+          animation: shakeY linear 10s infinite;
+}
+
+#home .statistis__form {
+  margin: auto;
+  position: relative;
+  top: 20rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  grid-auto-flow: column;
+  gap: 8rem;
+  height: 20rem;
+}
+
+#home .statistis__form .statistis__line {
+  width: 100%;
+  border: 1px solid white;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.3;
+  z-index: -100;
+}
+
+#home .statistis__form__element {
+  height: 100%;
+  width: 20rem;
+  background: #1a1f31;
+  text-align: center;
+  position: relative;
+}
+
+#home .statistis__form__element .text {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#home .statistis__form__element .text p {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #16cf16;
+}
+
+#home .statistis__form__element .text span {
+  color: #fff;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+#about {
+  position: relative;
+  padding: 8rem 0;
+  left: 0;
+  right: 0;
+}
+
+#about .about__ {
+  position: relative;
+  top: 0;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+
+#about .about__banner {
+  -webkit-animation: shakeY linear 10s infinite;
+          animation: shakeY linear 10s infinite;
+}
+
+#about .about__banner img {
+  position: relative;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#about .about__information {
+  position: relative;
+  text-align: left;
+}
+
+#about .about__information p {
+  font-size: 1.6rem;
+  color: #16cf16;
+  padding: .5rem;
+  max-width: 20rem;
+  border-radius: 20rem;
+  background-color: #1a1f31;
+  text-align: center;
+}
+
+#about .about__information h1 {
+  font-size: 3rem;
+  color: #fff;
+  padding: .5rem 0;
+}
+
+#about .about__information ul {
+  list-style: none;
+  color: #fff;
+  margin-left: 1rem;
+  padding: 1rem 0;
+}
+
+#about .about__information ul li {
+  font-size: 1.6rem;
+  margin: .5rem 0;
+}
+
+#about .about__information a {
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#Symptoms {
+  position: relative;
+  top: 0;
+  padding: 8rem 0;
+  left: 0;
+  right: 0;
+}
+
+#Symptoms .Symptoms__ {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 1 rem;
+  position: relative;
+}
+
+#Symptoms .Symptoms__detail span.heading {
+  font-size: 1.6rem;
+  color: #16cf16;
+  padding: .5rem;
+  max-width: 20rem;
+  border-radius: 20rem;
+  background-color: #1a1f31;
+  text-align: center;
+  display: block;
+}
+
+#Symptoms .Symptoms__detail h1 {
+  font-size: 3rem;
+  color: #fff;
+  padding: .5rem 0;
+}
+
+#Symptoms .Symptoms__detail p {
+  font-size: 1.6rem;
+  margin: .5rem 0;
+  color: #fff;
+  opacity: .5;
+}
+
+#Symptoms .Symptoms__detail ul {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+#Symptoms .Symptoms__detail ul li {
+  color: #fff;
+  width: 45%;
+  font-size: 1.6rem;
+  margin: .5rem 0;
+}
+
+#Symptoms .Symptoms__detail ul li i {
+  color: #16cf16;
+  padding-right: 1rem;
+}
+
+#Symptoms .Symptoms__detail ul li:nth-child(even) {
+  margin-left: 2rem;
+}
+
+#Symptoms .Symptoms__detail a {
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#Symptoms .Symptoms__banner {
+  position: relative;
+  -webkit-animation: shakeY linear 10s infinite;
+          animation: shakeY linear 10s infinite;
+}
+
+#Symptoms .Symptoms__banner img {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#covid-threat {
+  position: relative;
+  top: 0;
+  padding: 8rem 0;
+  left: 0;
+  right: 0;
+}
+
+#covid-threat .covid-threat__ {
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+#covid-threat .covid-threat__ span.heading-covid-threat {
+  font-size: 1.6rem;
+  color: #16cf16;
+  padding: .5rem;
+  max-width: 20rem;
+  border-radius: 20rem;
+  background-color: #1a1f31;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+#covid-threat .covid-threat__ h1 {
+  font-size: 3rem;
+  color: #fff;
+  padding: .5rem 0;
+}
+
+#covid-threat .covid-threat__ p {
+  width: 70%;
+  font-size: 1.6rem;
+  margin: 1rem auto;
+  color: #fff;
+  opacity: .5;
+}
+
+#covid-threat .covid-threat__banner {
+  -webkit-animation: shakeY linear 10s infinite;
+          animation: shakeY linear 10s infinite;
+  position: relative;
+}
+
+#covid-threat .covid-threat__banner img {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#Covid-Spread {
+  position: relative;
+  top: 0;
+  padding: 8rem 0;
+  left: 0;
+  right: 0;
+}
+
+#Covid-Spread .Covid-Spread__ {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 1rem;
+  position: relative;
+}
+
+#Covid-Spread .Covid-Spread__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#Covid-Spread .Covid-Spread__image-element {
+  width: 22rem;
+  height: 22rem;
+  margin: 1.2rem;
+  background-color: #1a1f31;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+#Covid-Spread .Covid-Spread__image-element img {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#Covid-Spread .Covid-Spread__image-element p {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+#Covid-Spread .Covid-Spread__image-element:hover {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+#Covid-Spread .Covid-Spread__info span.heading-spread {
+  font-size: 1.6rem;
+  color: #16cf16;
+  padding: .5rem;
+  max-width: 20rem;
+  border-radius: 20rem;
+  background-color: #1a1f31;
+  text-align: center;
+  display: block;
+}
+
+#Covid-Spread .Covid-Spread__info h1 {
+  font-size: 3rem;
+  color: #fff;
+  padding: .5rem 0;
+}
+
+#Covid-Spread .Covid-Spread__info p {
+  font-size: 1.6rem;
+  margin: .5rem 0;
+  color: #fff;
+  opacity: .5;
+}
+
+#Covid-Spread .Covid-Spread__info ul {
+  list-style: none;
+  color: #fff;
+  margin-left: 1rem;
+  padding: 1rem 0;
+}
+
+#Covid-Spread .Covid-Spread__info ul li {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: .5rem 0;
+}
+
+#Covid-Spread .Covid-Spread__info ul li i {
+  color: #16cf16;
+  padding-right: 1rem;
+}
+
+#Covid-Spread .Covid-Spread__info a {
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,9 +1,14 @@
 @import "./base.scss";
-body
+*::selection
 {
-  background-color: $background-color;
+    background-color: $text-button-color;
+    color:#fff;
 }
-  header
+        body
+        {
+          background-color: $background-color;
+        }
+     header
         {
           position: fixed;
           top: 0;
@@ -72,13 +77,13 @@ body
       #home
       {
           position: relative;
-          top: 8rem;
+          margin-top: 8.1rem;
           left: 0;
           right: 0;
           padding: 5rem;
-        
+          height: calc(100vh - 8.1rem);
           .home__
-          {
+          { position: relative;
             margin: auto;
             display: grid;
             grid-template-columns: auto auto auto;
@@ -108,8 +113,332 @@ body
             &banner
             {
               img{
-                animation: Infi-up-down linear 1.35s infinite;
+                animation: shakeY linear 10s infinite;
               }
             }
           }
+          .statistis__form
+          {
+            margin: auto;
+            position: relative;
+            top: 20rem;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-auto-flow: column;
+            gap: 8rem;
+            height: 20rem;
+
+            .statistis__line
+            {
+              width: 100%;
+              border: 1px solid white;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              opacity: 0.3;
+              z-index: -100;
+            }
+            &__element
+            {
+              height: 100%;
+              width: 20rem;
+              background: $color-button-hover;
+              text-align: center;
+              position: relative;
+              .text
+              {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                p{
+                  font-size: 4rem;
+                  font-weight: 700;
+                  color: $text-button-color;
+                }
+                span{
+                  color: $text-color;
+                  font-size: 1.8rem;
+                  text-transform: capitalize;
+                }
+              }
+            }
+          }
+
       }
+      #about
+      {
+        position: relative;
+        padding : 8rem 0;
+        left: 0;
+        right: 0;
+        .about__
+        { position: relative;
+          top: 0;
+          margin: auto;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          gap: 1rem;
+          &banner
+            {
+              img{
+                position: relative;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                
+              }
+              animation: shakeY linear 10s infinite;
+            }
+          &information
+          {
+            position: relative;
+            text-align: left;
+            p{
+              font-size: 1.6rem;
+              color: $text-button-color;
+              padding:.5rem;
+              max-width: 20rem;
+              border-radius: 20rem;
+              background-color: $color-button-hover;
+              text-align: center;
+
+            }
+            h1{
+              font-size: 3rem;
+              color: $text-color;
+              padding:.5rem 0;
+            }
+            ul{
+              list-style: none;
+              color: $text-color;
+              margin-left: 1rem;
+              padding:1rem 0;
+              li{
+                font-size: 1.6rem;
+                margin: .5rem 0;
+              }
+            }
+            a{
+              font-size: 1.8rem;
+              text-align: center;
+              text-transform: uppercase;
+            }
+          }
+
+        }
+
+      }
+      #Symptoms{
+        position: relative;
+        top:0;
+        padding : 8rem 0;
+        left: 0;
+        right: 0;
+        .Symptoms__
+        {
+          margin: auto;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          gap: 1 rem;
+          position: relative;
+          &detail
+          {
+            span.heading{
+              font-size: 1.6rem;
+              color: $text-button-color;
+              padding:.5rem;
+              max-width: 20rem;
+              border-radius: 20rem;
+              background-color: $color-button-hover;
+              text-align: center;
+              display: block;
+
+            }
+            h1{
+              font-size: 3rem;
+              color: $text-color;
+              padding:.5rem 0;
+            }
+            p{
+              font-size: 1.6rem;
+              margin: .5rem 0;
+              color: $text-color;
+              opacity: .5;
+            }
+            ul{
+              width: 80%;
+              display: flex;
+              flex-wrap: wrap;
+              list-style: none;
+              padding: 0.5rem 0;
+              li{
+                color: $text-color;
+                width: 45%;
+                font-size: 1.6rem;
+                margin: .5rem 0;
+                i{
+                  color: $text-button-color;
+                  padding-right: 1rem;
+                }
+              }
+              li:nth-child(even){
+                margin-left: 2rem;
+              }
+            }
+            a{
+              font-size: 1.8rem;
+              text-align: center;
+              text-transform: uppercase;
+            }
+          }
+          &banner
+          {
+            position: relative;
+            animation: shakeY linear 10s infinite;
+            img{
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+          }
+        }
+      }
+      #covid-threat{
+        position: relative;
+        top:0;
+        padding : 8rem 0;
+        left: 0;
+        right: 0;
+        .covid-threat__
+        {
+          margin: auto;
+          text-align: center;
+          position: relative;
+          span.heading-covid-threat
+          {
+            font-size: 1.6rem;
+            color: $text-button-color;
+            padding:.5rem;
+            max-width: 20rem;
+            border-radius: 20rem;
+            background-color: $color-button-hover;
+            text-align: center;
+            display: block;
+            margin: auto;
+          }
+          h1{
+            font-size: 3rem;
+            color: $text-color;
+            padding:.5rem 0;
+
+          }
+          p{
+              width: 70%;
+              font-size: 1.6rem;
+              margin: 1rem auto;
+              color: $text-color;
+              opacity: .5;
+          }
+          &banner
+          {
+            animation: shakeY linear 10s infinite;
+            position: relative;
+            img{
+              position: relative;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+      #Covid-Spread
+      {
+        position: relative;
+        top:0;
+        padding : 8rem 0;
+        left: 0;
+        right: 0;
+        .Covid-Spread__{
+          margin: auto;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          gap: 1rem;
+          position: relative;
+          &image{
+            display: flex;
+            flex-wrap: wrap;
+            &-element{
+              width: 22rem;
+              height: 22rem;
+              margin: 1.2rem;
+              background-color: $color-button-hover;
+              border-radius: 1rem;
+              text-align: center;
+              position: relative;
+              img{
+                position: relative;
+                top:  50%;
+                transform: translateY(-50%);
+              }
+              p{
+                position: absolute;
+                bottom: 8%;
+                left: 0;
+                right: 0;
+                font-size: 1.8rem;
+                color: $text-color;
+              }
+              &:hover{
+                transform: rotate(5deg);
+              }
+            }
+          }
+          &info
+          {
+            span.heading-spread
+            {
+              font-size: 1.6rem;
+              color: $text-button-color;
+              padding:.5rem;
+              max-width: 20rem;
+              border-radius: 20rem;
+              background-color: $color-button-hover;
+              text-align: center;
+              display: block;
+            }
+            h1{
+              font-size: 3rem;
+              color: $text-color;
+              padding:.5rem 0;
+            }
+            p{
+              font-size: 1.6rem;
+              margin: .5rem 0;
+              color: $text-color;
+              opacity: .5;
+            }
+            ul{
+              list-style: none;
+              color: $text-color;
+              margin-left: 1rem;
+              padding:1rem 0;
+              li{
+                color: $text-color;
+                font-size: 1.6rem;
+                margin: .5rem 0;
+                 i{
+                  color: $text-button-color;
+                  padding-right: 1rem;
+                 }
+              }
+            }
+            a{
+              font-size: 1.8rem;
+              text-align: center;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+

@@ -12,8 +12,13 @@ $color-button-hover:#1a1f31;
     outline: none; border:none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2s linear;}
-
+    transition: .2s linear;
+}
+*::selection
+{
+    background-color: $text-button-color;
+    color:#fff;
+}
 
 html{
     font-size: 62.5%;
@@ -46,6 +51,7 @@ html::-webkit-scrollbar-thumb{
      padding: 1rem;
      max-width: 30vw;
      border-radius: 20rem;
+     font-weight: 500;
      background: $text-button-color;
      display: inline-block;
      color:#070c1f;
