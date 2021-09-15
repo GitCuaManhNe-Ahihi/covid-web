@@ -74,3 +74,11 @@ html::-webkit-scrollbar-thumb{
         margin-top: 0rem;
     }
 }
+/*mixin*/
+@mixin SetForSection {
+
+    position: relative;
+    padding : 8rem 0;
+    left: 0;
+    right: 0;
+}
