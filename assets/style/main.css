@@ -134,6 +134,7 @@ header .header__nav-header ul {
 header .header__nav-header ul li {
   display: inline-block;
   padding: 0 1.5rem;
+  position: relative;
 }
 
 header .header__nav-header ul li a {
@@ -146,12 +147,46 @@ header .header__nav-header ul li a:hover {
   color: #16cf16;
 }
 
+header .header__nav-header ul li:hover ul.subnav {
+  padding: 2rem 3rem;
+  height: 24rem;
+}
+
 header .header__nav-header ul li:nth-child(5) a {
   color: #16cf16;
 }
 
 header .header__nav-header ul li:nth-child(6) a .fa {
   margin-left: 1rem;
+}
+
+header .header__nav-header ul ul.subnav {
+  background-color: rgba(255, 255, 255, 0.863);
+  position: absolute;
+  display: block;
+  width: 20rem;
+  border-radius: 1rem;
+  height: 0;
+  overflow: hidden;
+}
+
+header .header__nav-header ul ul.subnav li {
+  display: block;
+  padding: 2rem 0;
+}
+
+header .header__nav-header ul ul.subnav li a {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #000;
+}
+
+header .header__nav-header ul ul.subnav li:hover > a {
+  color: #16cf16;
+}
+
+header .header__nav-header ul ul.subnav li:not(:last-child) {
+  border-bottom: 0.1rem solid rgba(12, 8, 8, 0.514);
 }
 
 header .header__Number-phone-button {
@@ -977,12 +1012,34 @@ header .header__Number-phone-button i {
 }
 
 #footer-bg .footer__decription ul {
-  display: block;
   list-style: none;
+  padding: 2rem 0;
+}
+
+#footer-bg .footer__decription ul li {
+  display: inline-block;
+}
+
+#footer-bg .footer__decription ul li a {
+  font-size: 1.8rem;
+}
+
+#footer-bg .footer__decription ul li a i {
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  line-height: 3.5rem;
+  color: #fff;
+  background-color: #1a1f31;
+}
+
+#footer-bg .footer__decription ul li a:hover i {
+  opacity: .5;
 }
 
 #footer-bg .footer__decription ul li:not(:first-child) {
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 #footer-bg .footer__ .quick-link,
@@ -996,7 +1053,7 @@ header .header__Number-phone-button i {
 #footer-bg .footer__ .helpful-link p,
 #footer-bg .footer__ .improtant-link p,
 #footer-bg .footer__ .extended-link p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #fff;
   padding: .5rem 0;
 }
